@@ -28,20 +28,17 @@
 				<!-- 1.- Portada -->
 				<section>
 					<div style='margin:auto'>
-						<img src="img/sigte.png" width='650'>
+						<img src="img/sigte.png" width='600'>
 					</div>
 					<div style='clear: both'></div>
 					<div style='margin-top: 20px'>
 						<h2 style='color:#0000a0'>Overpass API</h2>
 						<h3 style='color:#0000a0'>Descargas selectivas desde OpenStreetMap</h3>
 					</div>
-					<br/>
 					<div style='clear:both; margin-top: 10px'>
 						<p><small>by <a href="https://twitter.com/santiagohiguera">@SantiagoHiguera</a> de <strong style='color: #0000ff'><a href="http://geoinquietos.org" target='_blank'>Geoinquietos
 	                Madrid</a></strong></small></p>	
-	                <br/>
-					<a href='http://mercatorlab.com/overpass'>http://mercatorlab.com/overpass</a>
-
+					<a href='https://shiguera.github.io/overpassapi/#/'>https://shiguera.github.io/overpassapi</a>
 					</div>
 				</section>
 
@@ -84,7 +81,8 @@
        		<section>
        			<h2>Enlaces a la documentación</h2>
               <ul>
-              	<li>Esta presentación: <br/><a href='http://mercatorlab.com/overpass' target='_blank'>http://mercatorlab.com/overpass</a></li>
+              	<li>Esta presentación: <br/><a href='https://shiguera.github.io/overpassapi/#/' target='_blank'>https://shiguera.github.io/overpassapi/#/</a></li>
+              	<li>Curso OSM:<br><a href="http://iceosm2016.readthedocs.io/en/latest/">http://iceosm2016.readthedocs.io</a></li>
               	<li>El portal de Overpass: <br/><a href="http://overpass-api.de/index.html" target='_blank'>http://overpass-api.de/index.html</a></li>
 	              <li>El lenguaje QL: <br/><a href="http://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL" target='_blank'>http://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL</a></li>
               	<li>Guía del lenguaje Overpass y ejemplos: <br/><a href="http://wiki.openstreetmap.org/wiki/Overpass_API/Language_Guide" target='_blank'>http://wiki.openstreetmap.org/wiki/Overpass_API/Language_Guide</a></li>
@@ -205,6 +203,12 @@
 				</section>
 
 				<section>
+					<h3>Traducción entre distintos formatos</h3>
+					<p>En este portal se pueden probar sentencias y también traducirlas entre distintos formatos</p>
+					<a href="http://overpass-api.de/query_form.html">http://overpass-api.de/query_form.html</a>
+				</section>
+
+				<section>
 					<h2>Selección de un elemento por su <strong>ID</strong></h2>
 					<pre><code>
      node(805202229); out;
@@ -236,7 +240,26 @@
 				</section>
 
 				<section>
-					<h2>Nodes con una etiqueta determinada</h2>
+					<h2>Nodes con una etiqueta determinada (I)</h2>
+					<pre><code>
+     node({{bbox}})['highway'='bus-stop']; out;
+						</code></pre>
+					<img src="img/busstop.png" width='600'><br/>
+					<a href="http://overpass-turbo.eu/map.html?Q=node(41.93357179016101%2C2.7652931213378906%2C41.99196885561916%2C2.8716373443603516)%5B%27highway%27%3D%27bus_stop%27%5D%3B%20out%3B" target='_blank'>nodes que son parada de autobus</a>
+				</section>
+
+				<section>
+					<h2>Nodes con una etiqueta determinada (II)</h2>
+					<pre><code>
+     node({{bbox}})['shop'='books']; out;
+						</code></pre>
+					<img src="img/books.png" width='600'><br/>
+					<a href="http://overpass-turbo.eu/map.html?Q=node(41.93357179016101%2C2.7652931213378906%2C41.99196885561916%2C2.8716373443603516)%5B%27shop%27%3D%27books%27%5D%3B%20out%3B" target='_blank'>nodes que son librerías</a>
+				</section>
+
+
+				<section>
+					<h2>Nodes con una etiqueta determinada (III)</h2>
 					<pre><code>
      node({{bbox}})['aeroway'='aerodrome']; out;
 						</code></pre>
@@ -256,6 +279,48 @@ node(40.6631, -4.0142, 40.6927, -3.9468)["amenity"="restaurant"]
 node["amenity"="restaurant"]["name"="El Albero"];out;
 						</code></pre>
 				</section>
+
+				<section>
+					<h3>Recursividad</h3>
+					<ul>
+						<li>Nodes de un conjunto de Ways</li>
+						<li>Nodes o Ways de un conjunto de Relations</li>
+						<li>Ways que tienen determinados Nodes como miembros</li>
+						<li>Relations que tienen determinados Nodes o Ways como miembros</li>
+						<li><span style='font-weight: bold'>Hacia arriba (atrás) &lt;: </span></li>
+						<li><span style='font-weight: bold'>Hacia abajo (adelante) &gt;: </span></li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>Nodes de una Relation</h3>
+					<p>Paradas de autobus de la línea  H12: Gornal => Besòs-Verneda (4799268)</p>
+					<pre><code>
+rel[ref="H12"];node(r);out;
+					</code></pre>
+	
+					<p>Si se conoce el id:</p>
+					<pre><code>
+rel(4799268);node(r);out;
+						</code></pre>
+				</section>
+
+				<section>
+					<h3>Ways de una Relation</h3>
+					<p>Línea de autobus de la línea  H12: Gornal => Besòs-Verneda (4799268)</p>
+					<pre><code>
+rel(41.3282,2.0160,41.4454,2.2443)[ref="H12"];way(r);out;
+					</code></pre>
+					<p>Los Nodes de las ways anteriores:</p>
+					<pre><code>
+rel(41.3282,2.0160,41.4454,2.2443)[ref="H12"];way(r);node(w);out;
+					</code></pre>
+					<p>Ways incluyendo los Nodes:</p>
+					<pre><code>
+rel(41.3282,2.0160,41.4454,2.2443)[ref="H12"];way(r);(._;>;);out;
+					</code></pre>
+				</section>
+
 
 				<section>
 					<h2>Ways con recursividad a nodos para que se vean las líneas</h2>
@@ -279,9 +344,7 @@ relation(40.3091,-3.7707,40.5420,-3.5702)["ref"="M-40"];way(r);out;
 					<pre><code>
 relation(40.3091,-3.7707,40.5420,-3.5702)["ref"="M-40"];way(r);(._;>;); out;
 						</code></pre>
-
 				</section>
-
 
 				<section>
 					<h2>Elementos a una distancia</h2>
