@@ -4,10 +4,10 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>OCTAVE</title>
+		<title>Overpass API</title>
 
 		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+		<link rel="stylesheet" href="css/theme/white.css">
 
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
@@ -25,232 +25,344 @@
 		<div class="reveal">
 			<div class="slides">
 
-				<!-- Portada -->
+				<!-- 1.- Portada -->
 				<section>
-						<div>
-							<div style='float:left; width: 150px'>
-								<img src='img/OctaveLogo_400x400.png' width='150' style='float:left'/>
-							</div>
-							<div style='width: 600px; float: left'>
-								<h2>Octave</h2>
-								<h4>La supercalculadora GIS</h4>
-							</div>
-							<div style='float:right; width: 150px'>
-								<img src='img/OctaveLogo_400x400.png' width='150' style='float:left'/>
-							</div>
-						</div>
-						<div style='margin-top: 20px;'>
-							<img src='img/peaks.png' width='575'/>
-						</div>
-						<a href='http://shiguera.github.io/siglibre2016'>http://shiguera.github.io/siglibre2016</a>
+					<div style='margin:auto'>
+						<img src="img/sigte.png" width='650'>
+					</div>
+					<div style='clear: both'></div>
+					<div style='margin-top: 20px'>
+						<h2 style='color:#0000a0'>Overpass API</h2>
+						<h3 style='color:#0000a0'>Descargas selectivas desde OpenStreetMap</h3>
+					</div>
+					<br/>
+					<div style='clear:both; margin-top: 10px'>
+						<p><small>by <a href="https://twitter.com/santiagohiguera">@SantiagoHiguera</a> de <strong style='color: #0000ff'><a href="http://geoinquietos.org" target='_blank'>Geoinquietos
+	                Madrid</a></strong></small></p>	
+	                <br/>
+					<a href='http://mercatorlab.com/overpass'>http://mercatorlab.com/overpass</a>
+
+					</div>
 				</section>
 
-				<!-- BIO -->
+				<!-- Bio -->
 				<section>
-	        <h3 style='float:left;'>Santiago Higuera</h3>
-	        <div style='float: right; width: 300px'>
-	          <img src="img/fotomia.jpg" style="float: right; width:280px"/>
-	        </div>
-	        <div style='float: left; width:650px'>
-	          <ul>
-	            <li><a href="http://twitter.com/santiagohiguera">@santiagohiguera</a></li>
-	            <li>Profe en <a href='https://twitter.com/caminosupm?lang=es'>@caminosupm</a></li>
-	            <li>Mi empresa es <a href="http://mercatorlab.com">Mercatorlab</a></li>
-	            <li>Participo en:
-	            <ul>
-	            	<li><a href="http://www2.caminos.upm.es/Departamentos/matematicas/WEBGIE/">Pensamiento Matemático</a></li>
+          <h2 style='float:left;'>Santiago Higuera</h2>
+          <div style='float: right; width: 300px'>
+            <img src="img/fotomia.jpg" style="float: right; width:280px"/>
+          </div>
+
+          <div style='float: left; width:650px'>
+            <ul>
+              <li><a href="http://twitter.com/santiagohiguera">@santiagohiguera</a></li>
+              <li>Profesor en <a href='https://twitter.com/caminosupm?lang=es'>@caminosupm</a></li>
+              <li>Mi empresa es <a href="http://mercatorlab.com">Mercatorlab</a></li>
+              <li>Participo en:</li>
+              <ul>
+              	<li><a href="http://www2.caminos.upm.es/Departamentos/matematicas/WEBGIE/">Pensamiento Matemático</a></li>
 	              <li><a href="http://osgeo.org">OSGeo</a> y
 	                <a href="http://es.osgeo.org">OSGeo-es</a></li>
-	              <li><a href="http://madrid.geoinquietos.org">Geoinquietos
+	              <li><a href="http://geoinquietos.org">Geoinquietos
 	                Madrid</a></li>
-	              <li><a href="http://osm.org">OpenStreetMap</a>
-	            </ul>
-	            </li>
-	            <li>Escribo en:
-	              <ul>
-	                <li><a href="http://mercatorlab.com/wordpress/">Blog Descartes</a></li>
-	                <li><a href="http://infocaminos.readthedocs.org/en/latest/">Manual GNU-Octave</a></li>
-	                <li><a href="http://openlayers.bicimap.es/manualOpenLayers.html">Manual OpenLayers</a></li>
-	              </ul>
-	            </li>
-	          </ul>
-	        </div>
+	              <li><a href="http://osm.org">OSM</a></li>
+              </ul>
+
+              
+              <li>Escribo en:
+                <ul>
+                  <li><a href="http://mercatorlab.com/wordpress/">Blog Descartes</a></li>
+                  <li><a href="http://infocaminos.readthedocs.org/en/latest/">Manual GNU-Octave</a></li>
+                  <li><a href="http://openlayers.bicimap.es/manualOpenLayers.html">Manual OpenLayers</a></li>
+                </ul>
+              </li>
+              <li>eMail: <a href='mailto:santiago.higuera@upm.es'>santiago.higuera@upm.es</a></li>
+            </ul>
+          </div>
        		</section>
 
-       	<!-- Ranking Lenguajes -->
-				<section>
-					<h3>Índice TIOBE Lenguajes más utilizados</h3>
-					<a href='http://www.tiobe.com/tiobe_index?page=index' target='_blank'>'http://www.tiobe.com/tiobe_index?page=index'</a>
-					<img src='img/lenguajes.png' width='650' />
-				</section>
+       		<!-- Enlaces a la documentación -->
+       		<section>
+       			<h2>Enlaces a la documentación</h2>
+              <ul>
+              	<li>Esta presentación: <br/><a href='http://mercatorlab.com/overpass' target='_blank'>http://mercatorlab.com/overpass</a></li>
+              	<li>El portal de Overpass: <br/><a href="http://overpass-api.de/index.html" target='_blank'>http://overpass-api.de/index.html</a></li>
+	              <li>El lenguaje QL: <br/><a href="http://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL" target='_blank'>http://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL</a></li>
+              	<li>Guía del lenguaje Overpass y ejemplos: <br/><a href="http://wiki.openstreetmap.org/wiki/Overpass_API/Language_Guide" target='_blank'>http://wiki.openstreetmap.org/wiki/Overpass_API/Language_Guide</a></li>
+              </ul>
+       		</section>
 
-       	<!-- Ranking Lenguajes Aálisis numérico -->
+       		<!-- Overpass API -->
+       		<section>
+						<h2>Overpass API</h2>
+						<br/>
+						<p>Overpass es una WEB API para la realización de consultas a la base de datos de OpenStreetMap</p>
+						<p>Overpass API dispone de dos lenguajes de consultas:</p>
+						<ul>
+							<li><span style='color:#0000f0; font-weight: bold'>Overpass XML:</span> pensado para su utilización desde lenguajes de programación</li>
+							<li><span style='color:#0000f0; font-weight: bold'>Overpass QL:</span> se puede utilizar desde lenguajes de programación pero también desde portales Front End, por ejemplo Overpass Turbo</li>
+						</ul>
+						<p style='color:#0000f0; font-weight: bold'>En esta charla enseñaremos a utilizar Overpass QL</p>
+       		</section>
+				
+       	<!-- Query schema -->
        	<section>
-					<h3>Lenguajes para análisis numérico</h3>
-					<ul>
-						<li>MATLAB - Octave</li>
-						<li>Python + NumPy + SciPy</li>
-						<li>R</li>
-						<li>Julia</li>
-						<li>Fortran</li>
-					</ul>
+       		<h2>Esquema de una consulta</h2>
+       		<img src="img/query.png"/>
+       	</section>
+
+				<!-- Consultas y sentencias? -->
+				<section>
+					<h2>Consultas y sentencias</h2>
+					<img src="img/query2.png">
+					<br>
+					<p>Cada <strong>consulta (query)</strong> está compuesta por una o más sentencias.</p>
+					<p>Cada <strong>sentencia</strong> termina en <strong>; (punto y coma)</strong>.</p>
+					<br/>
 				</section>
 
 				<section>
-					<h3>matplotlib</h3>
-					<h5>Librería python para gráficos que emula el interface Matlab-Octave</h5>
-					<img src='img/matplotlib.png' />
-				</section>
-				<!-- speed tests -->
-				<section>
-					<h3>Speed tests</h3>
-					<ul>
-						<li>MATLAB: El más rápido</li>
-						<li>Octave y Python: similares, buenas alternativas a MATLAB</li>
-					</ul>
-					<img src='img/speedtests.png' width='600' />
-				</section>
-				<!-- Interconexión con otros lenguajes -->
-				<section>
-					<h3>Interconexión con otros lenguajes</h3>
-					<ul>
-						<li>Python Oct2Py: Acceder a Octave desde Python</li>
-						<li>Java joPAS: Acceder a Octave desde Java</li>
-						<li>Java package: Acceder a clases java desde Octave</li>
-						<li>Oct-files: Compilar y usar C++ desde Octave</li>
-					</ul>
+					<h2>El Estado de Ejecución</h2>
+					<p>El conjunto de datos que se obtiene como resultado de cada sentencia se guarda en el <strong style='color:#ff0000'>conjunto por defecto</strong>, salvo que se designe otro conjunto con nombre para ello.
+					<br>
+					<p><strong style='color:#ff0000'>Estado de ejecución:</strong> Se compone del conjunto por defecto, otros conjuntos con nombre y una pila para los bloques de sentencias</p>
 				</section>
 
 				<section>
-					<h3>Octave IDE</h3>
-					<img src='img/octaveide.png' />
-				</section>
-
-				<section>
-					<h3>Octave CONSOLE</h3>
-					<img src='img/octaveconsole.png' width='800'/>
+					<h2>Arquitectura en tubería (pipe)</h2>
+					<p>Las sentencias se ejecutan una trás de otra.</p>
+					<p>El conjunto de datos que se obtiene como resultado de una sentencia pasa, como entrada de datos, a la siguiente sentencia.</p>
+					<p>Cada sentencia se ejecuta sobre el <em>estado de ejecución</em>, esto es, sobre el conjunto de datos que recibe como entrada</p>
+					<br>
+					<img src="img/pipe.jpg">
 				</section>
 				
 				<section>
-					<h3>Octave GRAPHICS: Sombrero</h3>
-					<img src='img/sombrero.png' />
-				</section>
-				<section>
-					<h3>Octave GRAPHICS: mdt25</h3>
-					<img src='img/mdt.png' width='800'/>
-				</section>
-
-				<section>
-					<h3>Octave packages: forge</h3>			
-					<a href='http://octave.sourceforge.net/packages.php' target='_blank'>http://octave.sourceforge.net/packages.php</a><br/>		
-					<img src='img/packages.png' width='1000' />
+					<h2>Tipos de sentencias</h2>
+					<p>Las sentencias pueden ser de varios tipos:</p>
+					<ul>
+						<li><strong>Sentencias independientes:</strong> sentencias completas por sí mismas. El resultado afecta al <em>estado de ejecución</em></li>
+						<li><strong>Filtros:</strong> forman parte de otra sentencia. Hay filtros y selectores</li>
+						<li><strong>Sentencias de bloque:</strong> agrupan varias sentencias. Hay bifurcaciones y bucles</li>
+						<li><strong>Settings:</strong> Se establecen una vez al principio, por ejemplo, el formato de salida de datos</li>
+						<li><strong>Action:</strong> por ejemplo <em>print</em>, cuyo efecto es en la salida, no en el estado de ejecución</li>
+					</ul>
 				</section>
 
+				<!-- El portal Overpass Turbo -->
 				<section>
-					<h3>Octave packages: destacados (I)</h3>
-					<div style=''>
-						<img src='img/pkgs1.png' />
+					<h2>El portal Overpass Turbo</h2>
+					<a href="http://overpass-turbo.eu/" target='_blank'>http://overpass-turbo.eu/</a>
+					<img src="img/overpassapi_ejemplo2.png">
+				</section>
+
+				<!-- Nodes contenidos en un rectángulo -->
+				<section>
+					<h2>Nodes contenidos en un rectángulo</h2>
+					<div>
+					<pre><code>
+          node(40.4447, -3.7344, 40.4487, -3.7301); out;
+						</code></pre>
+					</div>
+					<br/>
+					<div style='margin-left: auto; margin-right: auto; width: 950px'>
+						<div style='float:left; margin-right: 10px; width:470px'>
+							<img src="img/nodes1.png">
+						</div>
+						<div style='float:left; width:470px'>
+							<img src="img/nodes2.png">
+						</div>
 					</div>
 				</section>
 
 				<section>
-					<h3>Octave packages: destacados (II)</h3>
-					<div style=''>
-						<img src='img/pkgs2.png' />
+					<h2>Rectángulos (Bounding Box)</h2>
+					<p>Podemos definir el rectángulo (<em>Bounding Box</em>) de dos maneras:</p>
+					<ul>
+						<li><strong style='color:#ff0000'>Explícitamente</strong></li>
+						<ul><li><strong style='color:#0000ff'>(minlat , minlon, maxlat, maxlon)</strong></li></ul>
+						<li><strong style='color:#ff0000'>Rectángulo de pantalla (Overpass Turbo)</strong></li>
+						<ul><li><strong style='color:#0000ff'>{ { bbox } }</strong></li></ul>
+					</ul>
+					<img src="img/boundingbox.gif" width='800'>
+					<p>Para encontrar coordenadas:</p>
+					<a href="http://www.informationfreeway.org/" target='_blank'>http://www.informationfreeway.org/</a>
+				</section>
+
+				<!-- Opciones Overpass Turbo -->
+				<section>
+					<h2>Opciones de Overpass Turbo</h2>
+					<ul>
+						<li><strong>Run:</strong> ejecuta la consulta que esté en el editor y muestra el resultado en la pantalla del mapa. Hay que pulsar sobre la lupa para que centre la vista</li>
+						<li><strong>Share:</strong> ofrece un enlace para recuperar la consulta con un navegador</li>
+						<li><strong>Export:</strong> guarda en disco el resultado de la consulta en diferentes formatos. Permite guardar el mapa, como imagen png, o como mapa interactivo. También podemos grabar el texto de la propia consulta.</li>
+						<li><strong>Wizard:</strong> ayuda a crear consultas</li>
+						<li><strong>Save:</strong> guarda en el propio navegador una consulta </li>
+						<li><strong>Load:</strong> recupera una consulta guardada anteriormente </li>
+						<li><strong>Settings:</strong> permite configurar las opciones del programa</li>
+						<li><strong>Help:</strong> ayuda del programa</li>
+						<li><strong>Map-Data:</strong> permite seleccionar que la salida de resultados de una consulta se muestre sobre el mapa o como texto en formato OSM XML</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Selección de un elemento por su <strong>ID</strong></h2>
+					<pre><code>
+     node(805202229); out;
+						</code></pre>
+					<div style='margin-left: auto; margin-right: auto; width: 950px'>
+						<div style='float:left; margin-right: 10px; width:350px'>
+							<img src="img/sunsetimg.png">
+						</div>
+						<div style='float:left; width:580px'>
+							<img src="img/sunsetdata.png">
+						</div>
 					</div>
 				</section>
 
 				<section>
-					<h3>Octave packages: instalación</h3>
-					<div style='background: #ffffff; margin-top: 100px'>
-						<p style='margin: auto; font-family: "Lucida Console", Monaco, monospace; color: #000000'>pkg install -forge -auto package_name</p>
-					</div>
+					<h2>¿Cómo saber el ID de un elemento?</h2>
+					<p>Podemos localizar el elemento en el mapa, luego activar la edición con el editor ID (Hay que ser usuario registrado de OpenStreetMap) y finálmente pinchar en el enlace <strong style='color:#0000ff'><em>Ver en openstreetmap</em></strong></p>
+					<img src="img/enlaceverenosm.png" width='550'>
 				</section>
-				<!-- io package -->
+				
 				<section>
-					<h3>io package</h3>
-					<h5>Input/Output in external formats.</h5>
+					<h2>Acceder a un elemento por ID en OSM</h2>
+					<p>Tambiénpodemos acceder a la información de un elemento del que conocemos su ID desde dentro del propio mapa de OpenStreetMap</p>
 					<ul>
-						<li>object2json</li>
-						<li>CSV file functions</li>
-						<li>XLS and ODS I/O</li>
-						<li>DBF I/O</li>
-						<li>XML I/O</li>
+						<li><a href="https://www.openstreetmap.org/node/805202229" target='_blank'>https://www.openstreetmap.org/node/805202229</a></li>
+						<li><a href="https://www.openstreetmap.org/way/44571133" target='_blank'>https://www.openstreetmap.org/way/44571133</a></li>
+						<li><a href="https://www.openstreetmap.org/relation/1760647" target='_blank'>https://www.openstreetmap.org/relation/1760647</a></li>
 					</ul>
-					<a href='http://octave.sourceforge.net/io/overview.html' target='_blank'>http://octave.sourceforge.net/io/overview.html</a><br/>
 				</section>
 
-				<!-- geometry package -->
 				<section>
-					<h3>geometry package</h3>
-					<h5>Geometric computing to create, transform, manipulate and display geometric primitives.</h5>
-					<ul>
-						<li>2D</li>
-						<ul>
-							<li>Points, Vectors, Angles, Rays, Lines, Polylines, Boxes</li>
-							<li>Circles, Ellipses, CubicBezier, Polygons, Polynomial</li>
-							<li>Transformations</li>
-						</ul>
-						<li>3D</li>
-						<ul>
-							<li>Points, Lines, Edges, Planes, Meshes</li>
-							<li>Espheres, Boxes, Polygons</li>
-							<li>Transformations</li>
-						</ul>
-					</ul>
-					<a href='http://octave.sourceforge.net/geometry/overview.html' target='_blank'>http://octave.sourceforge.net/geometry/overview.html</a><br/>
+					<h2>Nodes con una etiqueta determinada</h2>
+					<pre><code>
+     node({{bbox}})['aeroway'='aerodrome']; out;
+						</code></pre>
+					<img src="img/aerodrome.png" width='600'><br/>
+					<a href="http://overpass-turbo.eu/map.html?Q=%20%20%20%20%20node(36.12900165569652%2C-10.96435546875%2C43.8186748554532%2C2.8125)%5B%27aeroway%27%3D%27aerodrome%27%5D%3B%20out%3B%0A" target='_blank'>nodes que son aeródromos</a>
+				</section>
+
+				<section>
+					<h2>Nodes por el valor de dos etiquetas</h2>
+					<p>Podemos poner como condición que el valor de dos o más etiquetas esté determinado, por ejemplo, para encontrar el Restaurante ‘El Albero‘ de Moralzarzal:</p>
+					<pre><code>
+node(40.6631, -4.0142, 40.6927, -3.9468)["amenity"="restaurant"]
+["name"="El Albero"];out;
+						</code></pre>
+					<p>También podríamos encontrarlo sin especificar el bounding box, solo por etiquetas:</p>
+					<pre><code>
+node["amenity"="restaurant"]["name"="El Albero"];out;
+						</code></pre>
+				</section>
+
+				<section>
+					<h2>Ways con recursividad a nodos para que se vean las líneas</h2>
+					<p>La carretera M-607:</p>
+					<pre><code>
+way(40.6573,-3.9610,40.7169,-3.7423)["ref"="M-607"];(._;>;);out;
+						</code></pre>
+					<p>Todos los ways con la etiqueta building=house de una determinada zona:</p>
+					<pre><code>
+way(40.67441, -3.97063, 40.67812, -3.96221)["building"="house"];(._;>;);out;
+						</code></pre>
+				</section>
+
+				<section>
+					<h2>Ways de una Relation</h2>
+					<p>Todas las ways de Madrid referenciadas en la relación de ref=M-40:</p>
+					<pre><code>
+relation(40.3091,-3.7707,40.5420,-3.5702)["ref"="M-40"];way(r);out;
+						</code></pre>
+					<p>La misma petición, pero con sus Nodes</p>
+					<pre><code>
+relation(40.3091,-3.7707,40.5420,-3.5702)["ref"="M-40"];way(r);(._;>;); out;
+						</code></pre>
 
 				</section>
 
-				<!-- database package -->
+
 				<section>
-					<h3>database package</h3>
-					<h5>Interface to SQL databases, currently only postgresql using libpq.</h5>
-					<a href='http://octave.sourceforge.net/database/overview.html' target='_blank'>http://octave.sourceforge.net/database/overview.html</a><br/>
+					<h2>Elementos a una distancia</h2>
+					<p>Nodes a una distancia de un punto de coordenadas conocidas:</p>
+					<pre><code>
+node(around:100.0,41.9837,2.8243);out;
+						</code></pre>
+					<p>Farmacias a menos de un kilómetro de la Plaza del Carmen, en Madrid:</p>
+					<pre><code>
+node(around:1000.0,40.41876,-3.70331)["amenity"="pharmacy"];out;
+						</code></pre>
+					<p>Bares a menos de 500 metros de la iglesia de Moralzarzal (por Id):</p>
+					<pre><code>
+way(132527765);node(around:500)["amenity"="bar"];out;
+						</code></pre>
+					
 				</section>
 
-				<!-- image package -->
 				<section>
-					<h3>image package</h3>
-					<h5>Functions for feature extraction, image statistics, spatial and geometric transformations, morphological operations, linear filtering, ...</h5>
-					<ul>
-						<li>Analysis, Statistics, Arithmetics</li>
-						<li>Black and White image functions</li>
-						<li>Colour maps and Colour controls</li>
-						<li>Display, Enhancement and Restoration</li>
-						<li>Filtering, Transforms and Spatial transformations</li>
-						<li>Morphological, Region based and Block Processing Operations</li>
-						<li>Read/ Write and Type conversions</li>
-					</ul>
-					<a href='http://octave.sourceforge.net/image/overview.html' target='_blank'>http://octave.sourceforge.net/image/overview.html</a><br/>
+					<h2>Unión de dos conjuntos de datos</h2>
+					<p>Se encierran entre paréntesis las dos sentencias cuyos conjuntos de salidas queremos unir, separadas por punto y coma</p>
+					<pre><code>
+		(node({{bbox}})['aeroway'='aerodrome'] ;
+		  way({{bbox}})['aeroway'='aerodrome']); (._;>;); out;
+						</code></pre>
+					<img src="img/aerodrome2.png" width='400'><br/>
+					<a href="http://overpass-turbo.eu/map.html?Q=(node(36.01356058518153%2C-10.74462890625%2C43.715534726205114%2C3.0322265625)%5B%27aeroway%27%3D%27aerodrome%27%5D%3Bway(36.01356058518153%2C-10.74462890625%2C43.715534726205114%2C3.0322265625)%5B%27aeroway%27%3D%27aerodrome%27%5D)%3B%20%2F*added%20by%20auto%20repair*%2F%20(._%3B%3E%3B)%3B%20%2F*end%20of%20auto%20repair*%2F%20out%3B%0A">Nodes y Ways que son aeródromos</a>
 				</section>
 
-				<!-- octproj package -->
 				<section>
-					<h3>octproj package</h3>
-					<h5>This package allows to call functions of PROJ.4 library for cartographic projections transformations.</h5>
-					<a href='http://octave.sourceforge.net/octproj/overview.html' target='_blank'>http://octave.sourceforge.net/octproj/overview.html</a><br/>
+					<h2>Unión: más ejemplos</h2>
+					<p>La siguiente sentencia solicita los Nodes con ‘amenity=restaurant’ o ‘amenity=pub’ del barrio de Salamanca, en Madrid:</p>
+					<pre><code>
+(node(40.4232,-3.6918,40.4378,-3.6793)["amenity"="bar"];
+node(40.4232,-3.6918,40.4378,-3.6793)["amenity"="pub"];);out;
+					</code></pre>
+					<p>Otro ejemplo sería '<em>todos los edificios y piscinas de una zona</em>':</p>
+					<pre><code>
+(way(40.67441, -3.97063, 40.67812, -3.96221)["building"="house"];
+way(40.67441, -3.97063, 40.67812, -3.96221)["leisure"="swimming_pool"]);
+(._;>;);out;
+					</code></pre>
 				</section>
 
-				<!-- mapping package -->
 				<section>
-					<h3>mapping package</h3>
-					<h5>Simple mapping and GIS .shp and raster file functions.</h5>
-					<ul>
-						<li>Shape files</li>
-						<li>Raster files</li>
-						<li>Paths in curves</li>
-						<li>Lengths and angles</li>
-						<a href='http://octave.sourceforge.net/mapping/overview.html' target='_blank'>http://octave.sourceforge.net/mapping/overview.html</a><br/>
-					</ul>
+					<h2>Ejemplo de Node en formato OSM</h2>
+					<pre><code>
+&lt;node id="25496583" lat="51.5173639" lon="-0.140043" version="1" changeset="203496"
+        user="80n" uid="1238" visible="true" timestamp="2007-01-28T11:40:26Z"&gt;
+    &lt;tag k="highway" v="traffic_signals"/&gt;
+&lt;/node&gt;
+					</code></pre>
+				</section>
+
+				<section>
+					<h2>Ejemplo de Way en formato OSM</h2>
+					<pre><code>
+&lt;way id="5090250" visible="true" timestamp="2009-01-19T19:07:25Z" version="8"
+        changeset="816806" user="Blumpsy" uid="64226"&gt;
+    &lt;nd ref="822403"/&gt;
+    &lt;nd ref="21533912"/&gt;
+    &lt;nd ref="821601"/&gt;
+    &lt;nd ref="21533910"/&gt;
+    &lt;nd ref="135791608"/&gt;
+    &lt;nd ref="333725784"/&gt;
+    &lt;nd ref="333725781"/&gt;
+    &lt;nd ref="823771"/&gt;
+    &lt;tag k="highway" v="residential"/&gt;
+    &lt;tag k="name" v="Clipstone Street"/&gt;
+    &lt;tag k="oneway" v="yes"/&gt;
+  &lt;/way&gt;
+
+					</code></pre>
 				</section>
 
 				<section>
 					<h1>THE END</h1>
-					<h3>BY Santiago Higuera</h3>
-					
+					<h3>by <a href="https://twitter.com/santiagohiguera">@SantiagoHiguera</a> de <strong style='color: #0000ff'><a href="http://geoinquietos.org" target='_blank'>Geoinquietos
+	                Madrid</a></strong></h3>
 					<p>
-					<div style="width: 300px;margin-left:auto; margin-right:auto">
+					<div style="width:350px; margin-left:auto; margin-right:auto">
 						<a class="image" href="http://wiki.osgeo.org/wiki/Geo_inquietos_Madrid" target="_blank">
 						<img src="img/geoinquietosmad_logo.png" alt="geoinquietosmad" style="float:left; margin:10px; width: 100px">
 						<img src="img/osgeo-es.png" alt="osgeoes" style="float:left; margin:10px; width: 100px">
@@ -258,25 +370,28 @@
 					</div>
           </p>
           <p style='clear:both'>
-            Esta obra está bajo una Licencia<br/><a rel="license"
+            Esta obra está bajo una <a rel="license"
             href="http://creativecommons.org/licenses/by-nc-sa/3.0/deed.es">
-              Creative Commons Atribución-NoComercial-CompartirIgual
+              Licencia Creative Commons Atribución-NoComercial-CompartirIgual
               3.0 Unported</a>.
           </p>
             <a rel="license"
             href="http://creativecommons.org/licenses/by-nc-sa/3.0/deed.es">
             <img src="img/cc-by-nc-sa.png" class="no-back" width='200'></a>
-					</section>
+
+				</section>
+
 			</div>
 		</div>
 
 		<script src="lib/js/head.min.js"></script>
 		<script src="js/reveal.js"></script>
-		
 
 		<script>
 			// More info https://github.com/hakimel/reveal.js#configuration
 			Reveal.initialize({
+				width: 1160,
+		    height: 800,
 				history: true,
 
 				// More info https://github.com/hakimel/reveal.js#dependencies
